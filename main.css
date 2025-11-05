@@ -149,7 +149,7 @@ a:focus {
 	color: gray;
 }
 .hero {
-    height: 45vh;
+    height: 32vh;
 }
 .hero h1 {
 		font-size: 15vh;
@@ -188,19 +188,17 @@ a:focus {
 .blob {
     position: relative;
 }
-.blob p {
+.intro-home p {
         font-size: 2vh;
 	    color: #f00b0d;
 	   	font-family: 'montserrat', sans-serif;
         font-weight: 700;
         line-height: 1.75;
         text-align: left;
-        position: relative;
-        top: -440px;
-        right: -40px;
+        
 }
-.blob span {
-    font-size: 2.5vh;
+.intro-home span {
+    font-size: 2vh;
     font-family: "montserrat", sans-serif;
     color: #f00b0d;
     font-style: italic;
@@ -210,7 +208,7 @@ a:focus {
     height: 15vh;
     width: auto;
 } */
-.blob img {
+.intro-home img {
     position: absolute;
     height: 100vw;
     width: auto;
@@ -222,15 +220,14 @@ a:focus {
     height: 20vh;
     width: auto;
     z-index: 0;
-    top: -340px;
-    right: 20px;
+    
 
 }
 .hero-image {
     height: 32vh;
 }
 .hero-image img {
-    height: 40vh;
+    height: 30vh;
     width: auto;
     margin: auto;
     position: relative;
