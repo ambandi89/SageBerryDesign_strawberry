@@ -73,7 +73,7 @@ nav {
 .ham-menu span {
   height: 5px;
   width: 100%;
-  background-color: #254441;
+  background-color: black;
   border-radius: 25px;
   position: absolute;
   top: 50%;
@@ -178,7 +178,7 @@ a:focus {
                   45px 45px 0px #c11a2b; */
 }
 .hero p {
-    font-size: 2.5vh;
+    font-size: 3.5vh;
 	    text-align: center;
         height:90vh;
 	    color: #f00b0d;
@@ -192,17 +192,12 @@ h2 {
     color: #f00b0d;
     text-align: center;
 }
-.intro-home {
-    height: 55vh;
-    display: flex;
-}
+
 .btn {
   position: relative;
   width: 185px;
   height: 5vh;
   margin: auto;
-  top: -80px;
-  right: 0px;
 }
 
  .btn a {
@@ -219,7 +214,7 @@ h2 {
   border-top: 1px solid rgba(250, 52, 52, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 10;
-  color: #254441;
+  color: black;
   border-radius: 30px;
   font-weight: 400;
   font-family: 'montserrat', sans-serif;
@@ -268,30 +263,47 @@ a:hover::before {
   border-radius: 30px;
   transition-delay: 0.5s;
 }
+.hero-btn {
+  position: relative;
+  top: -55px;
+}
 .blob {
     position: relative;
 }
+.separator {
+  position: relative;
+  top: 10px;
+}
+
+.separator img {
+  height: 12vw;
+  width: auto;
+  max-width: 100%;
+  margin: 50px auto;
+
+}
+.intro-home {
+  background-color: #f00b0d;
+  padding: 20px;
+  height: 85vh;
+}
+
 .intro-home p {
-        font-size: 2vh;
-	    color: #f00b0d;
-	   	font-family: 'montserrat', sans-serif;
-        font-weight: 700;
-        line-height: 1.75;
-        text-align: left;
-        margin: 20px;
+  font-size: 3.5vh;
+  color: #ffe3e7;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.75;
+  text-align: center;
+  margin: 35px;
         
 }
 .intro-home span {
-    font-size: 2vh;
+    font-size: 3.5vh;
     font-family: "montserrat", sans-serif;
-    color: #f00b0d;
+    color: #ffe3e7;
     font-style: italic;
 }
-/* .intro-home img {
-    float: right;
-    height: 15vh;
-    width: auto;
-} */
 .intro-home img {
     position: absolute;
     height: 100vw;
@@ -301,11 +313,21 @@ a:hover::before {
 #AbbySelfie {
     position: relative;
     float: right;
-    height: 20vh;
+    height: 23vh;
     width: auto;
     z-index: 0;
-    
-
+}
+.intro-abby {
+  margin: 20px;
+}
+.intro-abby p {
+  font-size: 2vh;
+  text-align: left;
+  margin: 10px;
+}
+.intro-btn {
+  display: block;
+  margin: 50px;
 }
 .hero-image {
     height: 32vh;
