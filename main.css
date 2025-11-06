@@ -310,6 +310,9 @@ a:hover::before {
     width: auto;
     z-index: -1;
 }
+hr {
+  border: 1px solid #ffe3e7;
+}
 #AbbySelfie {
     position: relative;
     float: right;
