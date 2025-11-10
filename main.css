@@ -315,10 +315,11 @@ hr {
 }
 #AbbySelfie {
     position: relative;
-    float: right;
-    height: 23vh;
+    height: 40vw;
     width: auto;
     z-index: 0;
+    display: block;
+    margin: auto;
 }
 .intro-abby {
   margin: 20px;
@@ -328,6 +329,7 @@ hr {
   text-align: left;
   margin: 10px;
   margin-top: 50px;
+  text-align: center;
 }
 .intro-btn {
   display: block;
@@ -362,6 +364,27 @@ hr {
   width: auto;
   display: block;
   margin: auto;
+}
+.scroll-image:hover #WWRscreencapture {
+    filter: none;
+    transform: translateY(-65%);
+    opacity: 1;
+}
+.scroll-image {
+  display: block;
+  height: 30vh;
+  overflow: hidden;
+  border: 0.5px solid #ffe3e7;
+  width: 60vw;
+  margin: auto;
+}
+#WWRscreencapture {
+  display: block;
+  width: 100%;
+  filter: grayscale(100%) invert(10%) sepia(8%) saturate(350%) hue-rotate(351deg) brightness(105%) contrast(95%);
+  margin-bottom: 32px;
+  transition: transform 8s;
+  height: auto;
 }
 
 
