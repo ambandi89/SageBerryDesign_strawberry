@@ -4,7 +4,7 @@ const offScreenMenu = document.querySelector(".off-screen-menu");
 hamMenu.addEventListener("click", (e) => {
   e.stopPropagation();
   // Only toggle on small screens
-  if (window.innerWidth < 992) {
+  if (window.innerWidth < 800) {
     hamMenu.classList.toggle("active");
     offScreenMenu.classList.toggle("active");
   }
@@ -17,7 +17,7 @@ submenuParents.forEach((parent) => {
   const submenu = parent.querySelector(".submenu");
 
   parent.addEventListener("click", (e) => {
-    if (window.innerWidth < 992) {
+    if (window.innerWidth < 800) {
       e.preventDefault();
       e.stopPropagation();
 
@@ -38,7 +38,7 @@ submenuParents.forEach((parent) => {
 
 // Click outside to close (mobile only)
 document.addEventListener("click", (e) => {
-  if (window.innerWidth >= 992) return; // ignore on desktop
+  if (window.innerWidth >= 800) return; // ignore on desktop
 
   const isClickInsideMenu = offScreenMenu.contains(e.target);
   const isClickOnHam = hamMenu.contains(e.target);
@@ -67,3 +67,32 @@ overlay.addEventListener("click", () => {
     submenu.classList.remove("open");
   });
 });
+
+
+
+// contact form on home page
+
+const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            successMessage.classList.add('show');
+            
+            // Hide the form
+            form.classList.add('hidden');
+            
+            // Optional: Reset form after submission
+            form.reset();
+            
+            // Optional: Hide success message and show form again after 3 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+                form.classList.remove('hidden');
+            }, 3000);
+        });
+
+// testimonial section on home page
+
