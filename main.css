@@ -516,12 +516,39 @@ hr {
     right: 0px;
     display: block;
 }
+/* Animated text start*/
+.animated-text-container {
+  display: block;
+    margin: 25px;
+    background: white;
+    border: 2px #ffe3e7 solid;
+    border-radius: 0.8rem;
+    box-shadow: 5px 5px 20px #6d6b6b6b;
+}
+.text-row {
+    font-size: 5vh;
+    font-family: "genty", sans-serif;
+    margin: 10px auto;
+    text-align: center;
+    
+}
+
+/* animated text end */
+
+.separator-about {
+  position: relative;
+  top: 10px;
+}
 .home-about {
-  margin: 60px auto;
+  background: #af090b;
+  height: 75vh;
+}
+.home-about h2 {
+  color: #ffe3e7;
 }
 .home-about p {
   font-size: 2vh;
-  color: black;
+  color: #ffe3e7;
   font-family: 'montserrat', sans-serif;
   font-weight: 700;
   line-height: 1.75;
@@ -773,7 +800,10 @@ hr {
 	}
 }
 
-
+.strawberry-divider {
+  display: flex;
+  justify-content: center;
+}
 
 /* contact on home page */
 
@@ -1075,4 +1105,19 @@ hr {
   .submenu {
     background-color: none;
   }
+}
+@media (min-width: 1201px) {
+      .off-screen-menu {
+        background: none;
+        font-size: 16px;
+        right: 0px;
+        height: 110px;
+        width: auto;
+        text-transform: uppercase;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        padding-right: 20px;
+        z-index: 10;
+      }
 }

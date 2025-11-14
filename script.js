@@ -96,3 +96,24 @@ const form = document.getElementById('contactForm');
 
 // testimonial section on home page
 
+// animated text
+const rows = [
+            document.getElementById('row1'),
+            document.getElementById('row2'),
+            document.getElementById('row3')
+        ];
+
+        const colors = ['#af090b', '#f00b0d', '#ffe3e7', "#1800ad"];
+
+        rows.forEach((row, index) => {
+            let colorIndex = index % colors.length;
+            
+            // Set initial color
+            row.style.color = colors[colorIndex];
+            
+            // Change color independently with staggered timing
+            setInterval(() => {
+                colorIndex = (colorIndex + 1) % colors.length;
+                row.style.color = colors[colorIndex];
+            }, 1500);
+        });
