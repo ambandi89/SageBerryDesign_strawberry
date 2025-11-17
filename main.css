@@ -516,10 +516,16 @@ hr {
     right: 0px;
     display: block;
 }
+.strawberries-container {
+  background: url(img/strawberries.png);
+  background-size: 50px 50px;
+  background-repeat: repeat;
+}
 /* Animated text start*/
 .animated-text-container {
   display: block;
 }
+
 .text-row {
     font-size: 3vh;
     font-family: "genty", sans-serif;
