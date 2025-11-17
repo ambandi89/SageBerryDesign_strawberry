@@ -597,6 +597,7 @@ hr {
 }
 .home-about h2 {
   color: #ffe3e7;
+  padding-top: 35px;
 }
 .home-about p {
   font-size: 2vh;
@@ -613,6 +614,14 @@ hr {
   display: block;
   margin: auto;
 }
+.home-portfolio {
+  background-color: #3e0385;
+  height: 120vh;
+}
+.home-portfolio h2 {
+  color: #ffe3e7;
+  padding-top: 35px;
+}
 .scroll-image:hover #WWRscreencapture {
     filter: none;
     transform: translateY(-65%);
@@ -622,13 +631,14 @@ hr {
   display: block;
     height: 30vh;
     overflow: hidden;
-    border: 0.5px solid #1800ad;
+    border: 0.5px solid #64055c;
     border-radius: 0.8rem;
-    outline: 2px solid #1800ad;
+    outline: 2px solid #64055c;
     outline-offset: 10px;
     width: 75vw;
-    margin: auto;
+    margin: 50px auto;
 }
+
 #WWRscreencapture {
   display: block;
   width: 100%;
