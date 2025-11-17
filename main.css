@@ -364,10 +364,11 @@ h2 {
   object-fit: cover;
   opacity: 0.3;
   transform: rotate(15deg);
-  position: relative;
-  top: 400px;
-  right: 0px; 
+  position: absolute;
+  top: 480px;
+  right: 10px; 
   animation: turnLeft 10s ease-in-out infinite alternate;
+  z-index: -1;
 }
 
 .rotated-image1 img {
@@ -388,10 +389,9 @@ h2 {
   height: 2vh;
   object-fit: cover;
   opacity: 0.3;
-  transform: rotate(15deg);
-  position: relative;
-  top: -100px;
-  right: -250px; 
+  position: absolute;
+  top: 315px;
+  transform: translateX(250px); 
   animation: turnRight 10s ease-in-out infinite alternate;
   z-index: -1;
 }
