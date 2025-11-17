@@ -323,7 +323,7 @@ a:focus {
     height: 32vh;
 }
 .hero h1 {
-		font-size: 15vh;
+		font-size: 17vh;
 	    text-align: center;
 	    color: #ffe3e7;
 	   	font-family: 'genty', cursive;
@@ -344,7 +344,7 @@ a:focus {
                   45px 45px 0px #c11a2b; */
 }
 .hero p {
-    font-size: 3.5vh;
+    font-size: 4.5vh;
 	    text-align: center;
         height:90vh;
 	    color: #f00b0d;
@@ -357,6 +357,57 @@ h2 {
     font-size: 5vh;
     color: #f00b0d;
     text-align: center;
+}
+.rotated-image1 {
+  width: auto;
+  height: 2vh;
+  object-fit: cover;
+  opacity: 0.3;
+  transform: rotate(15deg);
+  position: relative;
+  top: 400px;
+  right: 0px; 
+  animation: turnLeft 10s ease-in-out infinite alternate;
+}
+
+.rotated-image1 img {
+  height: 30vh;
+  width: auto;
+}
+
+@keyframes turnLeft {
+  from {
+    transform: rotate(15deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+.rotated-image2 {
+  width: auto;
+  height: 2vh;
+  object-fit: cover;
+  opacity: 0.3;
+  transform: rotate(15deg);
+  position: relative;
+  top: -100px;
+  right: -250px; 
+  animation: turnRight 10s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+.rotated-image2 img {
+  height: 30vh;
+  width: auto;
+}
+
+@keyframes turnRight {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
 }
 
 .btn {
@@ -431,14 +482,14 @@ a:hover::before {
 }
 .hero-btn {
   position: relative;
-  top: -55px;
+  top: 175px;
 }
 .blob {
     position: relative;
 }
 .separator {
   position: relative;
-  top: 10px;
+  top: 9px;
 }
 
 .separator img {
@@ -517,7 +568,7 @@ hr {
     display: block;
 }
 .strawberries-container {
-  background: url(img/strawberries.png);
+  background: url(img/blueberries.png);
   background-size: 50px 50px;
   background-repeat: repeat;
 }
@@ -541,7 +592,7 @@ hr {
   top: 10px;
 }
 .home-about {
-  background: #af090b;
+  background: #64055c;
   height: 75vh;
 }
 .home-about h2 {

@@ -117,3 +117,6 @@ const rows = [
                 row.style.color = colors[colorIndex];
             }, 1500);
         });
+
+
+        
