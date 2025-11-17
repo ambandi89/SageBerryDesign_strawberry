@@ -372,7 +372,7 @@ h2 {
 }
 
 .rotated-image1 img {
-  height: 30vh;
+  height: 25vh;
   width: auto;
 }
 
@@ -390,14 +390,14 @@ h2 {
   object-fit: cover;
   opacity: 0.3;
   position: absolute;
-  top: 315px;
+  top: 355px;
   transform: translateX(250px); 
   animation: turnRight 10s ease-in-out infinite alternate;
   z-index: -1;
 }
 
 .rotated-image2 img {
-  height: 30vh;
+  height: 25vh;
   width: auto;
 }
 
