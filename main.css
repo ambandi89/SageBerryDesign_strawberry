@@ -291,7 +291,7 @@ header {
 }
 header img {
     width: auto;
-    height: 6vh;
+    height: 12vw;
     margin: 15px;
     position: relative;
     bottom: 3px;
@@ -642,8 +642,8 @@ hr {
     display: block;
 }
 .strawberries-container {
-  background: url(img/blueberries.png);
-  background-size: 50px 50px;
+  /* background: url(img/ChromeStars.png); */
+  background-size: 150px 150px;
   background-repeat: repeat;
 }
 /* Animated text start*/
@@ -1070,7 +1070,7 @@ hr {
 .footer {
   position: relative;
   width: 100%;
-  background: var(--dark-navy);
+  background: var(--taupe);
   min-height: 100px;
   padding: 30px 60px;
   display: flex;
@@ -1079,7 +1079,7 @@ hr {
   flex-direction: column;
 }
 .footer img {
-    height: 10vh;
+    height: 8vh;
     width: auto;
     display: flex;
     margin: auto;
