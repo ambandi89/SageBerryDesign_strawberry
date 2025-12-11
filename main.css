@@ -582,7 +582,46 @@ a:hover::before {
 .intro-home {
   background-color: var(--dark-navy);
   padding: 20px;
-  height: 85vh;
+  height: 95vh;
+}
+
+.intro-image {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 30vh;
+  margin: 0 auto;
+}
+
+.intro-image img {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#chromeflower {
+    width: 35%;
+    height: 5vh;
+    top: 30px;
+    left: 50px;
+    z-index: 99;
+}
+
+#AbbySelfie {
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+#chromesmiley {
+  width: 30%;
+  height: 7vh;
+  bottom: 20px;
+  right: 70px;
+  z-index: 99;
 }
 
 .intro-home p {
@@ -601,23 +640,11 @@ a:hover::before {
     color: var(--light-pink);
     font-style: italic;
 }
-.intro-home img {
-    position: absolute;
-    height: 100vw;
-    width: auto;
-    z-index: -1;
-}
+
 hr {
   border: 1px solid var(--light-pink);
 }
-#AbbySelfie {
-    position: relative;
-    height: 40vw;
-    width: auto;
-    z-index: 0;
-    display: block;
-    margin: auto;
-}
+
 .intro-abby {
   margin: 20px;
 }
@@ -627,6 +654,7 @@ hr {
   margin: 10px;
   margin-top: 30px;
   text-align: center;
+  display: flex;
 }
 .intro-btn {
   display: block;
