@@ -361,7 +361,7 @@ a:focus {
 .hero h1 {
 		font-size: 12vh;
     position: relative;
-    right: -50px;
+    right: -18px;
     text-align: center;
     color: var(--light-pink);
     font-family: 'genty', cursive;
@@ -380,7 +380,7 @@ a:focus {
     font-size: 4.5vh;
     text-align: center;
     position: relative;
-    right: -75px;
+    right: -48px;
     color: var(--red);
     font-family: 'montserrat', cursive;
     font-weight: 700;
@@ -397,8 +397,8 @@ h2 {
   object-fit: cover;
   transform: rotate(3.5deg);
   position: relative;
-  top: -10px;
-  right: -10px;
+  top: 0px;
+  right: -16px;
 
   /* animation: turnLeft 10s ease-in-out infinite alternate; */
   z-index: -1;
@@ -618,9 +618,9 @@ a:hover::before {
 
 #chromesmiley {
   width: 30%;
-  height: 7vh;
-  bottom: 20px;
-  right: 70px;
+  height: 6vh;
+  bottom: 39px;
+  right: 67px;
   z-index: 99;
 }
 
@@ -1279,7 +1279,24 @@ hr {
   .submenu {
     background-color: none;
   }
+  .intro-image {
+    height: 350px;
+    max-width: 500px;
+  }
+  
+  #chromeflower {
+    width: 40%;
+  }
+  
+  #AbbySelfie {
+    width: 55%;
+  }
+  
+  #chromesmiley {
+    width: 35%;
+  }
 }
+
 @media (min-width: 1201px) {
       .off-screen-menu {
         background: none;

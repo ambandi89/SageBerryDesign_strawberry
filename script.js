@@ -96,27 +96,58 @@ const form = document.getElementById('contactForm');
 
 // testimonial section on home page
 
-// animated text
-const rows = [
-            document.getElementById('row1'),
-            document.getElementById('row2'),
-            document.getElementById('row3')
-        ];
+      // image spin
+// Make sure GSAP and ScrollTrigger are loaded
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-        const colors = ['#af090b', '#f00b0d', '#ffe3e7', "#1800ad"];
+gsap.registerPlugin(ScrollTrigger);
 
-        rows.forEach((row, index) => {
-            let colorIndex = index % colors.length;
-            
-            // Set initial color
-            row.style.color = colors[colorIndex];
-            
-            // Change color independently with staggered timing
-            setInterval(() => {
-                colorIndex = (colorIndex + 1) % colors.length;
-                row.style.color = colors[colorIndex];
-            }, 1500);
+// Create the scroll-triggered spin animation
+ScrollTrigger.create({
+  trigger: "#chromeflower",
+  start: "top bottom",
+  onEnter: () => {
+    // Fast spin for 1.5 seconds
+    gsap.to("#chromeflower", {
+      rotation: 360 * 4, 
+      duration: 1.5,
+      ease: "none",
+      onComplete: () => {
+        // Slow down to a stop
+        gsap.to("#chromeflower", {
+          rotation: 360 * 5, // One more rotation while slowing
+          duration: 2,
+          ease: "power3.out"
         });
+      }
+    });
+  },
+  once: true // Only trigger once per page load
+});
 
+// Optional: Reset on scroll back up
+ScrollTrigger.create({
+  trigger: "#chromeflower",
+  start: "top bottom",
+  onLeaveBack: () => {
+    gsap.set("#chromeflower", { rotation: 0 });
+  }
+});
 
-      
+// Chromesmiley animation - appear and turn towards the page
+gsap.set("#chromesmiley", { opacity: 0, rotationY: -90 });
+
+ScrollTrigger.create({
+  trigger: ".intro-image",
+  start: "top 80%",
+  onEnter: () => {
+    gsap.to("#chromesmiley", {
+      opacity: 1,
+      rotationY: 0,
+      duration: 1.5,
+      ease: "power2.out"
+    });
+  },
+  once: true
+});
