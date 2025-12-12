@@ -601,10 +601,10 @@ a:hover::before {
 }
 
 #chromeflower {
-    width: 35%;
-    height: 5vh;
+   width: 35%;
+    height: 7vh;
     top: 30px;
-    left: 50px;
+    left: 30px;
     z-index: 99;
 }
 
@@ -618,9 +618,9 @@ a:hover::before {
 
 #chromesmiley {
   width: 30%;
-  height: 6vh;
-  bottom: 39px;
-  right: 67px;
+  height: 7vh;
+  bottom: 31px;
+  right: 54px;
   z-index: 99;
 }
 
