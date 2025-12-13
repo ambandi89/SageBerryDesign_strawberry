@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     --webkit-font-smoothing: antialiased;
-    
+
 }
 html {
 	-moz-text-size-adjust: 100%;
@@ -23,6 +23,20 @@ html {
   --blue: #017E7f;
   
 }
+/* Add to your main.css */
+.separator svg,
+.separator-about svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+/* Alternative: pull the SVG up slightly to cover any gap */
+.separator svg {
+    position: relative;
+    top: 1px;
+}
 @font-face {
     font-family: "genty";
     src: url(fonts/GentyDemo-Regular.otf);
@@ -30,6 +44,7 @@ html {
 h1 {
     font-family: "genty";
     font-size: 10vh;
+        --webkit-font-smoothing: antialiased;
 }
 h2 {
     font-family: "Montserrat", sans-serif;
@@ -361,7 +376,7 @@ a:focus {
         100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 70%; }
     }
 .hero h1 {
-		font-size: 12vh;
+		font-size: 7rem;
     position: relative;
     right: -18px;
     text-align: center;
