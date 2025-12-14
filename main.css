@@ -23,20 +23,7 @@ html {
   --blue: #017E7f;
   
 }
-/* Add to your main.css */
-.separator svg,
-.separator-about svg {
-    display: block;
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-}
 
-/* Alternative: pull the SVG up slightly to cover any gap */
-.separator svg {
-    position: relative;
-    top: 1px;
-}
 @font-face {
     font-family: "genty";
     src: url(fonts/GentyDemo-Regular.otf);
@@ -308,10 +295,10 @@ header {
 }
 header img {
     width: auto;
-    height: 12vw;
+    height: 2.5rem;
     margin: 15px;
     position: relative;
-    bottom: 3px;
+    bottom: 0px;
     z-index: 0;
 }
 header a {
@@ -589,6 +576,7 @@ a:hover::before {
   top: 9px;
 }
 
+
 .separator img {
   height: 12vw;
   width: auto;
@@ -597,10 +585,40 @@ a:hover::before {
 
 }
 .intro-home {
-  background-color: var(--dark-navy);
-  padding: 20px;
-  height: 95vh;
+    background-color: var(--dark-navy);
+    padding: 20px;
+    min-height: 95vh; /* Change from height to min-height */
+    margin-top: -1px;
+    padding-bottom: 20px; /* More bottom padding */
+    overflow: visible;
+    z-index: 2;
 }
+
+/* Add a pseudo-element to extend the background */
+.intro-home::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px; /* Extend below the container */
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: var(--dark-navy);
+    z-index: 1;
+}
+
+.separator-bottom {
+    position: relative;
+    top: -4px;
+    margin-bottom: -4px;
+    background: linear-gradient(to bottom, #052939 0%, #052939 10%, transparent 10%);
+}
+
+.separator-bottom svg {
+    display: block;
+    position: relative;
+}
+
 
 .intro-image {
   position: relative;
@@ -619,7 +637,7 @@ a:hover::before {
 
 #chromeflower {
    width: 35%;
-    height: 7vh;
+    height: 2.75rem;
     top: 30px;
     left: 30px;
     z-index: 99;
@@ -635,9 +653,9 @@ a:hover::before {
 
 #chromesmiley {
   width: 30%;
-  height: 7vh;
-  bottom: 31px;
-  right: 54px;
+  height: 2.5rem;
+  bottom: 35px;
+  right: 59px;
   z-index: 99;
 }
 
@@ -651,12 +669,22 @@ a:hover::before {
   margin: 35px;
         
 }
-.intro-home span {
+/* .intro-home span {
     font-size: 3.5vh;
     font-family: "montserrat", sans-serif;
     color: var(--light-pink);
     font-style: italic;
+} */
+.intro-home span {
+    display: inline-block;
+    font-size: 3.5vh;
+    font-family: "montserrat", sans-serif;
+    color: var(--light-pink);
+    font-style: italic;
+    transform-origin: center;
+    margin-left: 0.3em; /* Add space to the left */
 }
+
 
 hr {
   border: 1px solid var(--light-pink);
@@ -665,6 +693,7 @@ hr {
 .intro-abby {
   margin: 20px;
 }
+
 .intro-abby p {
   font-size: 2vh;
   text-align: left;
@@ -696,6 +725,14 @@ hr {
   /* background: url(img/ChromeStars.png); */
   background-size: 150px 150px;
   background-repeat: repeat;
+}
+/* Target the SVG that comes right after .intro-home */
+.strawberries-container > svg:first-of-type {
+    display: block;
+    line-height: 0;
+    margin-top: -3px;
+    position: relative;
+    z-index: 1;
 }
 /* Animated text start*/
 .animated-text-container {
@@ -1135,7 +1172,7 @@ hr {
   flex-direction: column;
 }
 .footer img {
-    height: 8vh;
+    height: 3rem;
     width: auto;
     display: flex;
     margin: auto;

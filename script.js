@@ -106,7 +106,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Create the scroll-triggered spin animation
 ScrollTrigger.create({
   trigger: "#chromeflower",
-  start: "top bottom",
+  start: "top center",
   onEnter: () => {
     // Fast spin for 1.5 seconds
     gsap.to("#chromeflower", {
@@ -140,7 +140,7 @@ gsap.set("#chromesmiley", { opacity: 0, rotationY: -90 });
 
 ScrollTrigger.create({
   trigger: ".intro-image",
-  start: "top 80%",
+  start: "top 60%",
   onEnter: () => {
     gsap.to("#chromesmiley", {
       opacity: 1,
@@ -150,4 +150,47 @@ ScrollTrigger.create({
     });
   },
   once: true
+});
+
+
+
+// GSAP ScrollTrigger animation for "pop!" text
+// Make sure GSAP and ScrollTrigger are loaded in your HTML
+
+document.addEventListener('DOMContentLoaded', function() {
+    const popText = document.querySelector('.intro-home span');
+    
+    if (popText) {
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Create the smooth pop animation that triggers once on scroll
+        gsap.fromTo(popText,
+            {
+                scale: 1,
+                rotation: 0
+            },
+            {
+                scale: 1.25,
+                rotation: 2.5,
+                duration: 0.5,
+                ease: "back.out(1.4)",
+                scrollTrigger: {
+                    trigger: popText,
+                    start: "top 80%", // Animation starts when element is 80% down the viewport
+                    once: true, // Only animate once
+                    toggleActions: "play none none none"
+                },
+                onComplete: function() {
+                    // Settle back to slightly larger size
+                    gsap.to(popText, {
+                        scale: 1.2,
+                        rotation: 0,
+                        duration: 0.5,
+                        ease: "power1.out"
+                    });
+                }
+            }
+        );
+    }
 });
